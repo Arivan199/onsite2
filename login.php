@@ -17,7 +17,6 @@
 		if($name!="" && $password!=""){
 		$query= "SELECT count(*) as UserDet FROM users WHERE username='".$name."'and password='".$password."'";
 		$res=mysqli_query($dbcon,$query);
-		$arra=mysqli_fetch_array($result);
 		$count = mysqli_num_rows($res);
 		if($count>0){
 			$_SESSION['name'] = $name;
