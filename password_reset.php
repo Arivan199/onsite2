@@ -8,7 +8,7 @@
 	$email=$_POST['email'];
 	$password=$_POST['password'];
 	$select=mysql_query("UPDATE user set password='$password' WHERE email='$email'");
-	if(!$select)
+	if($select)
 	{
 	echo "Password updated succesfully";
 	}
