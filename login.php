@@ -15,7 +15,7 @@
 		$name=$_POST['username'];
 		$password=$_POST['password'];
 		if($name!="" && $password!=""){
-		$query= "SELECT count(*) as UserDet FROM users WHERE username='".$name."'and password='".$password."'";
+		$query= "SELECT count(*) as UserDet FROM users WHERE username='$name'and password='$password'";
 		$res=mysqli_query($dbcon,$query);
 		$count = mysqli_num_rows($res);
 		if($count>0){
